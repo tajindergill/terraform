@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "main" {
-  ami           = "ami-0eec78ea4cbaaf5bd"
+  ami           = "ami-0055977a6e828a4f4"
   instance_type = "t3.micro"
 
   tags = {
@@ -14,7 +14,7 @@ resource "aws_instance" "main" {
 # One resource referring to another resource's attribute.
 # Terraform understands the dependency and creates the instance first.
 resource "aws_route53_record" "main" {
-  zone_id = "Z05126561EI2V4JVVXVBY"
+  zone_id = "Z0066526WCKC4ZSGJG26"
   name    = "test"
   type    = "A"
   ttl     = 30
