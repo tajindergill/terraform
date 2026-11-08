@@ -10,10 +10,12 @@ variable "z" {
   default = false
 }
 
+# List
 variable "example1" {
   default = [1, "a", false, 2]
 }
 
+# Map : key=value
 variable "example2" {
   default = {
     a = "foo"
@@ -22,6 +24,7 @@ variable "example2" {
   }
 }
 
+# access the variables
 output "x" {
   value = var.x
 }
@@ -30,10 +33,12 @@ output "x1" {
   value = "x is ${var.x}"
 }
 
+# In list in Terraform Index starts from zero.. print false in this example
 output "example1" {
   value = var.example1[2]
 }
 
+# Accessing map
 output "example2" {
   value = var.example2["a"]
 }
