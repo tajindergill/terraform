@@ -1,3 +1,5 @@
+# once edit the code then commit and push on editor, followed by pull in the ec2 server
+
 variable "x" {
   default = "abc"
 }
